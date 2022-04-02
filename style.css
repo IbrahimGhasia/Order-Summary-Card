@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&family=Red+Hat+Display:wght@500;600;700&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	/* Neutral */
+	--Very-pale-blue: hsl(225, 100%, 98%);
+	--Desaturated-blue: hsl(224, 23%, 55%);
+	--Dark-blue: hsl(223, 47%, 23%);
+
+	/* Primary */
+	--Pale-blue: hsl(225, 100%, 94%);
+	--Bright-blue: hsl(245, 75%, 52%);
+}
+
+body {
+	background-image: url(./images/pattern-background-desktop.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-color: var(--Pale-blue);
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	font-family: 'Red Hat Display', sans-serif;
+}
+
+.container {
+	background-color: var(--Very-pale-blue);
+	border-radius: 1.2rem;
+	width: 450px;
+	height: 650px;
+	margin: 4rem 2rem;
+}
+
+.container .main-image {
+	display: flex;
+	justify-content: center;
+	border-radius: 1.2rem;
+}
+
+.container .main-image img {
+	border-radius: 1rem 1rem 0 0;
+}
+
+.container .main-content .heading {
+	text-align: center;
+	font-weight: 1000;
+	font-size: 24px;
+	color: var(--Dark-blue);
+	margin-top: 1.5rem;
+}
+
+.container .main-content p {
+	text-align: center;
+	font-weight: 500;
+	color: var(--Desaturated-blue);
+	margin: 0 4rem;
+	margin-bottom: 2rem;
+}
+
+.container .plan-card {
+	display: flex;
+	background-color: rgba(0, 0, 0, 1.5%);
+	padding: 1.5rem;
+	margin: 2rem 3rem;
+	border-radius: 1.5rem;
+}
+
+.container .plan-card div:nth-child(1) {
+	display: flex;
+	flex: 0.1;
+	align-items: center;
+}
+
+.container .plan-card div:nth-child(2) {
+	display: grid;
+	flex: 0.7;
+	align-items: center;
+	margin-right: 80px;
+}
+
+.container .plan-card div:nth-child(3) {
+	display: flex;
+	flex: 0.2;
+	align-items: center;
+	color: var(--Bright-blue);
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+.container .plan-card div:nth-child(3):hover {
+	cursor: pointer;
+	color: hsl(245, 75%, 70%);
+}
+
+.container .plan-card span {
+	font-weight: 700;
+	color: var(--Dark-blue);
+}
+
+.container .button .success {
+	margin: 0rem 2rem;
+	height: 30px;
+	width: 350px;
+	padding: 20px;
+	border: 1px solid var(--Bright-blue);
+	border-radius: 0.5rem;
+	background-color: var(--Bright-blue);
+	color: white;
+	font-weight: 700;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container .button .success:hover {
+	background-color: hsl(245, 75%, 70%);
+	border-color: hsl(245, 75%, 70%);
+	cursor: pointer;
+}
+
+a {
+	all: unset;
+}
+
+.container .cancel {
+	font-weight: 700;
+	color: var(--Desaturated-blue);
+	text-decoration: none;
+	margin-top: 2rem;
+}
+
+.container .cancel:hover {
+	cursor: pointer;
+}
+
+@media (max-width: 460px) {
+	.container {
+		width: 360px;
+		height: 600px;
+	}
+
+	.container .main-image {
+		width: 360px;
+		height: 176px;
+	}
+
+	.container .button .success {
+		width: 280px;
+		height: 50px;
+	}
+
+	.container .cancel {
+		margin-top: 20px;
+	}
+
+	.container .plan-card {
+		display: flex;
+		margin: 1rem 1rem;
+		padding-top: 1rem;
+	}
+
+	.container .plan-card div:nth-child(1) {
+		align-items: center;
+	}
+
+	.container .plan-card div:nth-child(2) {
+		align-items: center;
+		margin-left: 5px;
+		margin-right: 60px;
+	}
+
+	.container .plan-card div:nth-child(3) {
+		align-items: center;
+	}
+}
